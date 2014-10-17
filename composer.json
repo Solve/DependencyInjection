@@ -3,7 +3,7 @@
     "type": "library",
     "description": " - [ DependencyInjector ] Injector & Container",
     "keywords": ["dependency injector","dependency","dependency container"],
-    "homepage": "http://github.com/Solve/DependencyInjector",
+    "homepage": "http://github.com/Solve/DependencyInjection",
     "license": "MIT",
     "authors": [
         {
