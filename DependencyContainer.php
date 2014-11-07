@@ -44,9 +44,11 @@ class DependencyContainer {
         return self::$_mainInstance;
     }
 
-    public function addDependencies($dependencies) {
+    public function addDependencies($dependencies, $overwrite = true) {
         foreach ($dependencies as $name => $dependencyInfo) {
-            $this->add($name, $dependencyInfo['className'], $dependencyInfo);
+            if ($overwrite || !$this->hasDependency($name)) {
+                $this->add($name, $dependencyInfo['className'], $dependencyInfo);
+            }
         }
     }
 
